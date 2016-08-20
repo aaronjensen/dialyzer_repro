@@ -11,7 +11,9 @@ defmodule DialyzerRepro.Mixfile do
      start_permanent: Mix.env == :prod,
      aliases: aliases(),
      deps: deps(),
-     dialyxir: [plt_add_deps: :project]]
+     dialyzer: [
+       plt_file: ".local.plt",
+       plt_add_deps: :transitive]]
   end
 
   # Configuration for the OTP application.
@@ -37,7 +39,7 @@ defmodule DialyzerRepro.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:gettext, "~> 0.11"},
+     {:gettext, github: "elixir-lang/gettext"},
      {:cowboy, "~> 1.0"},
      {:dialyxir, "~> 0.3.5"}]
   end
