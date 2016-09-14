@@ -36,7 +36,7 @@ defmodule DialyzerRepro.Mixfile do
     [{:phoenix, "~> 1.2.0"},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.0"},
-     {:ecto, github: "elixir-ecto/ecto", override: true},
+     {:ecto, "~> 2.0.5"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
